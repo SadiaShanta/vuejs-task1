@@ -3,10 +3,10 @@
   import { useRoute } from 'vue-router';
   import { computed } from "vue";
   import Form from "@/components/Form.vue"; 
-  import blogDetails1 from "../assets/images/BlogDetails1.png";
-  import writer from "../assets/images/Writer.png";
-  import comment1 from "../assets/images/comment1.png";
-  import comment2 from "../assets/images/comment2.png";
+  import blogDetails1 from "/images/BlogDetails1.png";
+  import writer from "/images/Writer.png";
+  import comment1 from "/images/comment1.png";
+  import comment2 from "/images/comment2.png";
   import Comment from "@/components/Comment.vue"; 
 
   const blogs= ref([
@@ -65,16 +65,16 @@
       <!-- Social Media Links -->
       <div class="w-1/6 p-4 mt-28">
         <div class="flex items-center mb-6">
-          <a href="#"><img src="../assets/images/facebook.png" alt="Facebook" class="w-3 h-3 mr-2"></a>
+          <a href="#"><img src="/images/facebook.png" alt="Facebook" class="w-3 h-3 mr-2"></a>
         </div>
         <div class="flex items-center mb-6">
-          <a href="#"><img src="../assets/images/twitter.png" alt="Twitter" class="w-3 h-3 mr-2"></a>
+          <a href="#"><img src="/images/twitter.png" alt="Twitter" class="w-3 h-3 mr-2"></a>
         </div>
         <div class="flex items-center mb-6">
-          <a href="#"><img src="../assets/images/linkdin.png" alt="LinkedIn" class="w-3 h-3 mr-2"></a>
+          <a href="#"><img src="/images/linkdin.png" alt="LinkedIn" class="w-3 h-3 mr-2"></a>
         </div>
         <div class="flex items-center">
-          <a href="#"><img src="../assets/images/Dribble.png" alt="LinkedIn" class="w-3 h-3 mr-2"></a>
+          <a href="#"><img src="/images/Dribble.png" alt="LinkedIn" class="w-3 h-3 mr-2"></a>
         </div>
       </div>
     <!-- Blog Details -->

@@ -1,5 +1,5 @@
 <script setup>
-import logo from "../assets/images/Logo.png"
+import logo from "/images/Logo.png"
 import {ref } from "vue";
 
 const navbar = ref('')

@@ -1,11 +1,11 @@
 <script setup>
   import { ref } from "vue";
   import { router } from "@/router"; 
-  import blog1 from "../assets/images/Blog1.png";
-  import blog2 from "../assets/images/Blog2.png";
-  import blog3 from "../assets/images/Blog3.png";
-  import blog4 from "../assets/images/Blog4.png";
-  import blog5 from "../assets/images/Blog5.png";
+  import blog1 from "/images/Blog1.png";
+  import blog2 from "/images/Blog2.png";
+  import blog3 from "/images/Blog3.png";
+  import blog4 from "/images/Blog4.png";
+  import blog5 from "/images/Blog5.png";
   import Latest from "@/components/Latest.vue"; 
   // import { useRouter } from 'vue-router';
 import BlogDetailsVue from "./BlogDetails.vue";

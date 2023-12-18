@@ -1,11 +1,11 @@
 <script setup>
   import { ref } from "vue";
-  import post1 from "../assets/images/Post1.png";
-  import post2 from "../assets/images/Post2.png";
+  import post1 from "/images/Post1.png";
+  import post2 from "/images/Post2.png";
   import Post from "@/components/Post.vue"; 
-  import latest1 from "../assets/images/Post3.png";
-  import latest2 from "../assets/images/Post4.png";
-  import latest3 from "../assets/images/Post5.png";
+  import latest1 from "/images/Post3.png";
+  import latest2 from "/images/Post4.png";
+  import latest3 from "/images/Post5.png";
   import Latest from "@/components/Latest.vue"; 
 
 const posts = ref([
