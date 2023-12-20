@@ -84,7 +84,7 @@ import BlogDetailsVue from "./BlogDetails.vue";
             <i class="mdi mdi-arrow-right mt-16"></i>
             <div class="grid grid-cols-3 gap-1 w-1/4 mt-12">
               <div v-for="(image, index) in blog.images" :key="index" @click="changePicture(blog, index)">
-                <div :class=" { 'text-ash': index === blog.selectedImageIndex, 'text-black': index !== blog.selectedImageIndex }">
+                <div :class="{ 'text-ash': index === blog.selectedImageIndex, 'text-black': index !== blog.selectedImageIndex }">
                   <p>{{ index + 1 }}</p>
                 </div>
               </div>
