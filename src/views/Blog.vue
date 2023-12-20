@@ -52,52 +52,46 @@ import BlogDetailsVue from "./BlogDetails.vue";
           name: 'Technology, Interface Design',
           title: 'Using UX Design to Build a Sustainable Future',
           date: '6 May, 2020',
-          image: blog1,
+          images: [blog1, blog2, blog3],
           details: 'Transformation has to be driven by everybody, not just by climate groups, and we have a responsibility to use our influence to drive this.',
+          selectedImageIndex: ref(0),
         },
         
       ]);
       // const router = useRouter()
       const goToBlogPage =(id) =>{
         router.push({name: 'blogDetails', params:{id}})
-      }
-  const openBlog = (blogId) => {
-  
-  console.log('Open blog:', blogId);
-  router.push({ name: 'blogDetails', params: { id: blogId } });
-};
+      };
+      const changePicture = (blog, index) => {
+        blog.selectedImageIndex = index;
+      };
 </script>
 
 <template>
   <main>
     <div class="flex flex-col items-left py-16">
-    <h2 class="my-5 text-5xl md:text-3xl font-medium text-black text-center md:text-left ml-10">Blog</h2>
-    <div v-for="blog in blogs" :key="blog.id" @click="goToBlogPage(blog.id)">
-      <div class="grid grid-cols-1 md:grid-cols-2 place-items-center">
-        <div class="p-10">
-          <img :src="blog1" class="w-full grid place-items-center gap-5 text-center" alt="category1">
-        </div>
-        <div class="p-10">
-          <p class="w-3/4">{{ blog.name}}</p><br>
-          <h3 class="text-3xl font-bold mt-5">{{ blog.title}}</h3>
-          <p class="w-3/4 mt-5">{{ blog.date}}</p>
-          <p class="w-3/4 mt-10">{{ blog.details}}</p>
-          <i class="mdi mdi-arrow-right  mt-16"></i>
-          <div class="grid grid-cols-3 gap-1 w-1/4 mt-12">
-    
-          <div class="col-ash p-4">
-            <p class="text-gray-400">1</p>
+      <h2 class="my-5 text-5xl md:text-3xl font-medium text-black text-center md:text-left ml-10">Blog</h2>
+      <div v-for="blog in blogs" :key="blog.id">
+        <div class="grid grid-cols-1 md:grid-cols-2 place-items-center">
+          <div class="p-10" @click="goToBlogPage(blog.id)">
+            <img :src="blog.images[blog.selectedImageIndex]" class="w-full grid place-items-center gap-5 text-center" alt="category1">
           </div>
-          <div class="col-black p-4">
-            <p>2</p>
-          </div>
-          <div class="col-black p-4">
-            <p>3</p>
+          <div class="p-10">
+            <p class="w-3/4">{{ blog.name}}</p><br>
+            <h3 class="text-3xl font-bold mt-5">{{ blog.title}}</h3>
+            <p class="w-3/4 mt-5">{{ blog.date}}</p>
+            <p class="w-3/4 mt-10">{{ blog.details}}</p>
+            <i class="mdi mdi-arrow-right mt-16"></i>
+            <div class="grid grid-cols-3 gap-1 w-1/4 mt-12">
+              <div v-for="(image, index) in blog.images" :key="index" @click="changePicture(blog, index)">
+                <div :class=" { 'text-ash': index === blog.selectedImageIndex, 'text-black': index !== blog.selectedImageIndex }">
+                  <p>{{ index + 1 }}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        </div> 
       </div>
-    </div>
     </div>
     <div class="flex flex-col items-left py-8">
       <h2 class="mt-4 mb-8 ml-8 text-xs font-regular text-Black text-center md:text-left">Categories : <span class="underline ml-8"> Interaction Design &#9660;</span></h2>

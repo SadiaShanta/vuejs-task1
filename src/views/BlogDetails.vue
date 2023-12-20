@@ -62,7 +62,6 @@
     <p class="w-3/4 mt-5">{{ selectedBlog.date}}</p>
     <img v-if="selectedBlog.image" :src="selectedBlog.image" alt="Blog Image"><br>
     <div class="flex">
-      <!-- Social Media Links -->
       <div class="w-1/6 p-4 mt-28">
         <div class="flex items-center mb-6">
           <a href="#"><img src="/images/facebook.png" alt="Facebook" class="w-3 h-3 mr-2"></a>
@@ -77,7 +76,6 @@
           <a href="#"><img src="/images/Dribble.png" alt="LinkedIn" class="w-3 h-3 mr-2"></a>
         </div>
       </div>
-    <!-- Blog Details -->
       <div class="w-5/6 p-4 mr-40">
         <img v-if="selectedBlog.writer" :src="selectedBlog.writer" alt="Writer Image"><br>
         <h1>{{ selectedBlog.title }}</h1>
